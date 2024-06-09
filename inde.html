@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <form class="DataEntryForm submitForm">
+            <input type="number" placeholder="MRP">
+            <input type="number" placeholder="Product Price">
+            <input type="text" placeholder="Product Name">
+            <input type="number" placeholder="Product Quantity">
+
+            <select>
+                <option value="kg">Kg</option>
+                <option value="litre">Litre</option>
+                <option value="ml">Ml</option>
+                <option value="gm">Gm</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="MainContainerOfProduct"></div>
+
+        <div class="editFormContainer">
+            <div class="close">
+                <span>X</span>
+            </div>
+            <form class=" editForm">
+                <input type="number" placeholder="MRP" required>
+                <input type="number" placeholder="Product Price" required>
+                <input type="text" placeholder="Product Name" required>
+                <input type="number" placeholder="Product Quantity">
+                <div class="btnContainer">
+
+                    <select>
+                        <option value="kg">Kg</option>
+                        <option value="litre">Litre</option>
+                        <option value="ml">Ml</option>
+                        <option value="gm">Gm</option>
+                    </select>
+
+                    <button class="confirm" type="submit">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

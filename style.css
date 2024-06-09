@@ -1,0 +1,362 @@
+.MainContainerOfProduct {
+    /* display: grid;
+    grid-template-columns: repeat(3, 415px); */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* product container */
+
+.productContainer  {
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.62);
+}
+
+.productPrices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.productPrice {
+    align-self: center;
+}
+
+.productMrp {
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.buttonContainer button {
+    height: 40px;
+    width: 90px;
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.533);
+    cursor: pointer;
+    
+}
+
+.buttonContainer button:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.245);
+    transition: 0.3s ease-in-out;
+}
+
+.container {
+    position: absolute;
+    position: fixed;
+    top: 100px;
+    left: 400px;
+    width: 500px;
+    height: 400px;
+    background: rgba(83, 83, 83, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(84, 84, 84);
+    border-radius: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.formPopContainer {
+    /* display: grid;
+    grid-template-columns: 400px;
+    justify-content: center;
+    height: 50vh;
+    align-items: center; */
+    height: 50vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+.cancelContainer {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    border: 1px solid red;
+    cursor: pointer;
+    height: 30px;
+    width: 35px;
+    font-size: 20px;
+    border-radius: 30px;
+    margin-left: 400px;
+    box-shadow: 0px 0px 10px rgba(20, 19, 19, 0.533);
+
+}
+
+.cancelContainer:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.mrpPopEdit,
+.pricePopEdit,
+.namePopEdit,
+.quantityPopEdit {
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(20, 19, 19, 0.533);
+    border: none;
+    
+}
+
+.submitBtn {
+    padding: 5px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(20, 19, 19, 0.533);
+    border: none;
+}
+
+.UUID {
+    display: none;
+}
+p.nameAndQuantity{
+    overflow-wrap: break-word;
+}
+.card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.62);
+    overflow: hidden;
+  }
+  
+  .card .options {
+    position: absolute;
+    top: 0;
+    right: -80px;
+    width: 100px;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    background-color: rgba(183, 183, 183, 0.245);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .card:hover .options {
+    transform: translateX(-80px);
+    opacity: 1;
+  }
+  
+  .option {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .option:hover {
+    background-color: #ddd;
+  }
+.editFormContainer{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: rgba(51, 51, 51,0.5);
+    display: none;
+}
+.close{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin: 10px;
+
+}
+.editForm input{
+    padding: 5px;
+    width: 80%;
+    margin: 20px;
+}
+.close span{
+    width: 50px;
+    align-items: center;
+    cursor: pointer;
+}
+.btnContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btnContainer button{
+    padding: 5px;
+    margin-left: 20px;
+}
+.editFormContainer{
+    display: none;
+    background-color: #757575;
+    height: max-content;
+    padding: 20px;
+}
+.confirm{
+    cursor: pointer;
+}
+ 
+
+@media (max-width:576px) {
+    .MainContainerOfProduct{
+        /* max-width: 1140px; */
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .productContainer{
+        /* flex: 0 0 auto; */
+        width: 100%;
+    }
+
+    .container{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        /* padding: 20px; */
+    }
+
+    .cancelContainer{
+        margin-top: 15px;
+        margin-left: 280px;
+    }
+
+    .formPopContainer 
+    .mrpPopEdit,
+    .pricePopEdit,
+    .namePopEdit,
+    .quantityPopEdit
+     {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+}
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px){
+    .MainContainerOfProduct{
+        /* max-width: 1140px; */
+        /* display: flex;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .container{
+        height: 500px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+    }
+    .cancelContainer{
+        margin-top: 15px;
+        margin-left: 90%;
+    }
+
+    .formPopContainer 
+    .mrpPopEdit,
+    .pricePopEdit,
+    .namePopEdit,
+    .quantityPopEdit{
+    height: 50px;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.submitBtn{
+    width: 130px;
+    padding: 13px;
+    font-size: 17px;
+    margin-top: 30px;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    }
+}
+
+@media (min-width: 993px) {
+    .MainContainerOfProduct{
+        /* max-width: 1140px; */
+        /* display: flex;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        
+    }
+
+    .container {
+        position: absolute;
+        position: fixed;
+        top: 100px;
+        left: 400px;
+        width: 500px;
+        height: 400px;
+    }
+    .formPopContainer {
+        display: grid;
+        grid-template-columns: 400px;
+        justify-content: center;
+        height: 50vh;
+        align-items: center;
+    }
+    .cancelContainer{
+        margin-left: 400px;
+    }
+    .submitBtn{
+        width: 130px;
+        padding: 13px;
+        font-size: 17px;
+        margin-top: 30px;
+        /* margin-left: 110px; */
+        margin-left: 130px;
+        margin-right: 100px;
+    }
+}
